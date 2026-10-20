@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brain IQ 100</title>
+<link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<section id="home">
+<div style="font-size:3rem" aria-hidden="true">🧠</div><h1>Brain IQ 100</h1><div class="tag">Think Smart. Move Strategically. Train Your Brain.</div>
+<p class="mt">Arrange the numbers 1 to 100 into order using as few moves as you can. A puzzle for fun and practice — not a measured IQ score.</p>
+<div class="card" style="max-width:560px;margin:14px auto">
+<div class="row"><label>Mode <select id="mode"><option value="swap">Swap (recommended)</option><option value="adj">Adjacent Swap</option><option value="slide">Sliding (99 tiles + blank)</option></select></label>
+<label>Difficulty <select id="diff"><option>Easy</option><option selected>Medium</option><option>Hard</option><option>Expert</option></select></label></div>
+<div class="row"><button class="btn p" id="play">Play Now</button><button class="btn" id="rand">Random Puzzle</button><button class="btn" id="daily">Daily Challenge</button></div>
+<div class="row"><button class="btn" id="how">How to Play</button><button class="btn" id="snd">🔊 Sound: on</button><button class="btn" id="thm">◐ Theme</button></div>
+<div class="mt" id="sum"></div></div></section>
+
+<section id="game">
+<div class="top"><div><button class="btn" id="home2">⌂ Home</button> <b id="hd"></b></div>
+<div><button class="btn" id="help">? Help</button> <button class="btn" id="snd2">🔊</button> <button class="btn" id="thm2">◐</button></div></div>
+<div class="stats">
+<div class="card stat"><b id="sT">0:00</b><span>Time</span></div><div class="card stat"><b id="sM">0</b><span>Moves</span></div>
+<div class="card stat"><b id="sS">1000</b><span>Score</span></div><div class="card stat"><b id="sC">0</b><span>Correct</span></div>
+<div class="card stat"><b id="sR">100</b><span>Remaining</span></div><div class="card stat"><b id="sH">0</b><span>Hints left</span></div>
+<div class="card stat"><b id="sB">–</b><span>Best score</span></div><div class="card stat"><b id="sMin">–</b><span>Minimum moves</span></div></div>
+<div class="main"><div class="bw"><div class="bd" id="board" role="grid" aria-label="Puzzle board"></div><div class="pause" id="pov">⏸ Paused</div></div>
+<div class="side card"><b>Target</b><div class="tg" id="tgt" aria-label="Target arrangement"></div>
+<p id="status" class="mt"></p>
+<div class="row" style="justify-content:flex-start">
+<button class="btn" id="undo">↶ Undo</button><button class="btn" id="redo">↷ Redo</button><button class="btn" id="hint">💡 Hint</button>
+<button class="btn" id="pz">⏸ Pause</button><button class="btn" id="rs">Restart</button><button class="btn" id="np">New Puzzle</button><button class="btn" id="sol">Solution</button></div></div></div>
+<div id="msg" aria-live="polite"></div></section></div>
+<dialog id="dlg"></dialog>
+<script src="script.js"></script></body></html>
